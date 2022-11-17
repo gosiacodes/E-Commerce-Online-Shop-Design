@@ -27,6 +27,6 @@ Website has responsive design.
 
 ## :pushpin: _GUI examples - mobile_
 
-<img src="/img/Online_Shop_6.png" width="400" height="auto" alt="Example index 6"/>
+<img src="/img/Online_Shop_6.png" width="300" height="auto" alt="Example index 6"/>
 
-<img src="/img/Online_Shop_7.png" width="400" height="auto" alt="Example index 7"/>
+<img src="/img/Online_Shop_7.png" width="300" height="auto" alt="Example index 7"/>
