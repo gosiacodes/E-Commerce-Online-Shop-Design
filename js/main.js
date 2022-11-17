@@ -41,7 +41,7 @@ const displayProducts = () => {
     let name = arr[i].name;
     let price = arr[i].price;
     const check = "prod";
-    createProd(imgSrc, name,price, check);
+    createProd(imgSrc, name, price, check);
   }
 };
 
@@ -53,52 +53,52 @@ const displayProdIndex = () => {
     let name = arr[i].name;
     let price = arr[i].price;
     const check = "index";
-    createProd(imgSrc, name, price, check);    
+    createProd(imgSrc, name, price, check);
   }
 };
 
 // Function to create elements
 const createProd = (imgSrc, name, price, check) => {
-    let divProd = document.createElement("div");
-    let imgProd = document.createElement("img");
-    let nameProd = document.createElement("h4");
-    let priceProd = document.createElement("p");
-    let buttonProd = document.createElement("button");
-    let divOverlay = document.createElement("div");
-    let prodDesc = document.createElement("p");
-    let buttonMore = document.createElement("button");
+  let divProd = document.createElement("div");
+  let imgProd = document.createElement("img");
+  let nameProd = document.createElement("h4");
+  let priceProd = document.createElement("p");
+  let buttonProd = document.createElement("button");
+  let divOverlay = document.createElement("div");
+  let prodDesc = document.createElement("p");
+  let buttonMore = document.createElement("button");
 
-    // Set values on elements
-    imgProd.src = imgSrc;
-    nameProd.innerText = name;
-    priceProd.innerText = "$" + price;
-    buttonProd.innerText = "Add to cart";
-    prodDesc.innerText =
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe debitis qui libero pariatur exercitationem commodi optio? Minus obcaecati ut magnam nihil recusandae est neque odit aperiam remitaque! Consequuntur, provident!";
-    buttonMore.innerText = "More info";
+  // Set values on elements
+  imgProd.src = imgSrc;
+  nameProd.innerText = name;
+  priceProd.innerText = "$" + price;
+  buttonProd.innerText = "Add to cart";
+  prodDesc.innerText =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sunt quam alias soluta ad, labore quas velit rem dolorum eius cum laboriosam magni provident similique!";
+  buttonMore.innerText = "More info";
 
-    // Add classes on elements
-    priceProd.className = "price";
-    buttonProd.className = "atc-btn";
-    buttonMore.className = "rm-btn";
-    divOverlay.className = "overlay";
-    prodDesc.className = "description";
-    divProd.className = "img-products";
+  // Add classes on elements
+  priceProd.className = "price";
+  buttonProd.className = "atc-btn";
+  buttonMore.className = "rm-btn";
+  divOverlay.className = "overlay";
+  prodDesc.className = "description";
+  divProd.className = "img-products";
 
-    // Add elements to div
-    divOverlay.appendChild(prodDesc);
-    divOverlay.appendChild(buttonMore);
-    divOverlay.appendChild(buttonProd);
-    divProd.appendChild(imgProd);
-    divProd.appendChild(nameProd);
-    divProd.appendChild(priceProd);
-    divProd.appendChild(divOverlay);
-    if (check === "prod") {
-        prodContProd.appendChild(divProd);
-    } else if (check === "index") {
-        prodContIndex.appendChild(divProd);
-    }
-}
+  // Add elements to div
+  divOverlay.appendChild(prodDesc);
+  divOverlay.appendChild(buttonMore);
+  divOverlay.appendChild(buttonProd);
+  divProd.appendChild(imgProd);
+  divProd.appendChild(nameProd);
+  divProd.appendChild(priceProd);
+  divProd.appendChild(divOverlay);
+  if (check === "prod") {
+    prodContProd.appendChild(divProd);
+  } else if (check === "index") {
+    prodContIndex.appendChild(divProd);
+  }
+};
 
 // Function for mobile menu
 const hamburgerMenu = () => {
