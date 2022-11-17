@@ -375,9 +375,8 @@ button:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.75rem;
-  padding: $padding1;
+  padding: $padding1 0.5rem;
   margin: $margin1 0;
-  width: 90%;
 }
 
 .cat-icon {
@@ -758,6 +757,9 @@ footer {
     height: 3.5rem;
     width: 3.5rem;
   }
+  .icon-title {
+    font-size: 0.9rem;
+  }
   footer {
     padding: 0.5rem;
   }
@@ -816,9 +818,6 @@ footer {
     height: 3.25rem;
     width: 3.25rem;
   }
-  .icon-title {
-    font-size: 0.9rem;
-  }
   footer {
     padding: 0;
   }
@@ -842,12 +841,8 @@ footer {
     max-width: 7rem;
   }
   .footer-nav-column {
-    // width: 20%;
     margin: 0.5rem;
   }
-  // .subscribe {
-  //   width: 95%;
-  // }
 }
 
 @media only screen and (max-width: 350px) {
