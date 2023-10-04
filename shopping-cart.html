@@ -24,7 +24,7 @@
     <link rel="icon" href="img/camera-logo-16.png" type="image/png" />
     <title>best photo shot</title>
   </head>
-  <body onload="displayProducts()">
+  <body onload="displayProdCart(), displayProdIndex()">
     <!-- Navbar -->
     <nav class="nav-container">
       <!-- Website nav-menu -->
@@ -64,6 +64,7 @@
         </a>
       </div>
     </nav>
+    <!-- Main -->
     <main>
       <!-- Header -->
       <header class="header">
@@ -81,14 +82,75 @@
             <i class="fa-solid fa-heart"></i>
             <i class="fa-solid fa-user"></i>
             <a href="shopping-cart.html"
-              ><i class="fa-solid fa-cart-shopping" value="2"></i
+              ><i class="fa-solid fa-cart-shopping" value=2></i
             ></a>
           </span>
         </div>
       </header>
+      <!-- Shopping cart section -->
+      <div class="summary-shopping-cart">
+        <div class="shopping-cart">
+          <h2 class="cart-title">SHOPPING CART</h2>
+          <div class="cart-prod-container" id="prod-cart"></div>
+          <button>Continue Shopping</button>
+        </div>
+        <div class="order-summary">
+          <h2 class="cart-title">ORDER SUMMARY</h2>
+          <div class="order-summary-column">
+            <div class="order-summary-row">
+              <p>Subtotal</p>
+              <p>$898</p>
+            </div>
+            <div class="order-summary-row">
+              <p>Delivery</p>
+              <p style="text-decoration: line-through">$29</p>
+            </div>
+            <div class="order-summary-row">
+              <p>Add a promo code</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="order-summary-row">
+              <p>Total</p>
+              <p>$898</p>
+            </div>
+            <div class="order-summary-column" id="buttons-column">
+              <button class="order-summary-button">CHECKOUT</button>
+              <button class="order-summary-button" id="paypal"></button>
+              <button class="order-summary-button" id="klarna"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Products section -->
       <section class="products-section">
-        <!-- Products container -->
-        <div class="products-container" id="products"></div>
+        <h1 class="title">TRENDING NOW</h1>
+        <div class="products-container" id="prod-index"></div>
+      </section>
+      <!-- Categories icons section -->
+      <section class="icons-section">
+        <h1 class="title">POPULAR CATEGORIES</h1>
+        <div class="container-icons">
+          <div class="cat-icon">
+            <img src="img/drone_96.png" class="icon-circle" />
+            <h5 class="icon-title">Drones</h5>
+          </div>
+          <div class="cat-icon">
+            <img src="img/camera_96.png" class="icon-circle" />
+            <h5 class="icon-title">Digital Cameras</h5>
+          </div>
+          <div class="cat-icon">
+            <img src="img/camera_lens_96.png" class="icon-circle" />
+            <h5 class="icon-title">Lens</h5>
+          </div>
+          <div class="cat-icon">
+            <img src="img/flash_light_96.png" class="icon-circle" />
+            <h5 class="icon-title">Flash lamps</h5>
+          </div>
+          <div class="cat-icon">
+            <img src="img/sling_bag_96.png" class="icon-circle" />
+            <h5 class="icon-title">Bags</h5>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Footer -->

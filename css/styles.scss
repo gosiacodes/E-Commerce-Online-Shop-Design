@@ -87,6 +87,7 @@ button:hover {
   background-color: $secondarycolor;
   overflow: hidden;
   position: relative;
+  text-align: center;
   display: none;
   font-family: $fontfamily1;
   box-shadow: 0px 1px 5px rgba(81, 80, 80, 0.7);
@@ -191,6 +192,20 @@ button:hover {
   color: $maincolor;
 }
 
+.fa-cart-shopping::after {
+  content: attr(value);
+  font-size: 0.8rem;
+  color: $textcolor;
+  background: $secondarycolor;
+  border: 1px solid $maincolor;
+  border-radius: 50%;
+  padding: 4px 6px;
+  position: relative;
+  left: -5px;
+  top: -12px;
+  opacity: 0.9;
+}
+
 // Hero image
 .hero-section,
 .hero-section-2 {
@@ -207,7 +222,7 @@ button:hover {
 
 .hero-image img {
   width: 100%;
-  max-height: 30rem;
+  max-height: 50rem;
 }
 
 .hero-image-2 img {
@@ -405,6 +420,161 @@ button:hover {
   font-family: $fontfamily1;
 }
 
+// Shopping cart and order summary
+.summary-shopping-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 95%;
+  margin-top: $margin1;
+}
+
+// Shopping cart
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: auto;
+  border: 2px solid $maincolor;
+  padding: $padding1 0.5rem;
+  margin: $margin1 auto;
+}
+
+.shopping-cart button {
+  width: 80%;
+  font-size: 1.1rem;
+  margin-bottom: $margin1;
+}
+
+.cart-title {
+  font-family: $fontfamily1;
+  color: $maincolor;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.cart-prod-container {
+  padding: $padding1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cart-prod {
+  padding: $padding1;
+  margin: $margin1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid $secondarycolor;
+}
+
+.cart-prod img {
+  max-width: 40%;
+  height: auto;
+}
+
+.desc-prod {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.amount-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $secondarycolor;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+.cart-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.fa-regular:hover,
+.fa-solid:hover {
+  color: $maincolor;
+}
+
+// Order summary
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: auto;
+  border: 2px solid $maincolor;
+  padding: $padding1 0.5rem;
+  margin: $margin1 auto;
+}
+
+.order-summary-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $padding1;
+  gap: 0.75rem;
+  width: 80%;
+}
+
+.order-summary-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding1;
+  gap: 1rem;
+  width: 100%;
+}
+
+.order-summary-row i.fa-solid {
+  font-size: 1.1rem;
+}
+
+#buttons-column {
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.order-summary-button {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  font-family: $fontfamily1;
+  letter-spacing: 1px;
+  background-color: $secondarycolor;
+  color: $textcolor;
+}
+
+.order-summary-button#paypal {
+  background: url("../img/PayPal_logo.png") no-repeat 0 0 $secondarycolor;
+  background-size: 30%;
+  background-position: center;
+}
+
+.order-summary-button#klarna {
+  background: url("../img/Klarna_logo_2.png") no-repeat 0 0 $secondarycolor;
+  background-size: 30%;
+  background-position: center;
+}
+
+.order-summary-button#paypal:hover,
+.order-summary-button#klarna:hover {
+  background-color: $bgcolor;
+}
+
 // Footer
 footer {
   display: flex;
@@ -564,6 +734,12 @@ footer {
     max-width: 20px;
     max-height: 20px;
   }
+  .shopping-cart {
+    width: 40%;
+  }
+  .order-summary {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -594,6 +770,17 @@ footer {
   }
   .description {
     font-size: 0.9rem;
+  }
+  .order-summary-button {
+    height: 3rem;
+    font-size: 1.1rem;
+  }
+  .order-summary-button#paypal {
+    background-size: 40%;
+  }
+
+  .order-summary-button#klarna {
+    background-size: 40%;
   }
 }
 
@@ -689,9 +876,11 @@ footer {
   .rm-btn {
     margin-top: 0.75rem;
   }
-  button {
-    padding: 0.65rem;
-    font-size: 0.8rem;
+  .cart-prod-container .cart-prod {
+    margin: 0.5rem 0;
+  }
+  #buttons-column {
+    gap: 1.2rem;
   }
 }
 
@@ -710,7 +899,19 @@ footer {
     padding: 0.75rem;
     font-size: 0.9rem;
   }
+  .summary-shopping-cart {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+  .shopping-cart {
+    width: 60%;
+  }
+  .order-summary {
+    width: 60%;
+  }
 }
+
 @media only screen and (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -765,6 +966,12 @@ footer {
   }
   .paying-methods {
     justify-content: center;
+  }
+  .shopping-cart {
+    width: 80%;
+  }
+  .order-summary {
+    width: 80%;
   }
 }
 
@@ -843,6 +1050,12 @@ footer {
   .footer-nav-column {
     margin: 0.5rem;
   }
+  .shopping-cart {
+    width: 90%;
+  }
+  .order-summary {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -873,5 +1086,8 @@ footer {
   .subscribe {
     width: 90%;
     padding: 0.75rem;
+  }
+  .desc-prod {
+    gap: 0.5rem;
   }
 }
